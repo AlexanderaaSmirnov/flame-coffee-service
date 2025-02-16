@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame Coffee Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #f8f8f8;
+        }
+        header {
+            background: #222;
+            color: #fff;
+            padding: 15px;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background: #ff9900;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            width: 80%;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.instagram.com/flame_coffee_service/logo.jpg" alt="Flame Coffee Service Logo" class="logo">
+        <h1><i class="fa-solid fa-mug-hot"></i> Flame Coffee Service</h1>
+        <p>Professional coffee machine and grinder repair</p>
+    </header>
+    
+    <div class="container">
+        <h2><i class="fa-solid fa-tools"></i> Our Services</h2>
+        <ul>
+            <li>✅ Coffee machine diagnostics and repair</li>
+            <li>✅ Grinder calibration and maintenance</li>
+            <li>✅ Spare parts replacement</li>
+            <li>✅ Preventive maintenance</li>
+        </ul>
+        
+        <h2><i class="fa-solid fa-images"></i> Our Work</h2>
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/La_Marzocco_Strada.jpg" alt="La Marzocco Coffee Machine">
+            <img src="https://www.lamarzocco.com/wp-content/uploads/2020/10/strada-ep-la-marzocco.jpg" alt="La Marzocco Strada">
+        </div>
+        
+        <h2><i class="fa-solid fa-phone"></i> Contact Us</h2>
+        <div class="form-container">
+            <input type="text" id="name" placeholder="Your name">
+            <input type="tel" id="phone" placeholder="Your phone">
+            <button class="btn" onclick="sendToWhatsApp()">Send via WhatsApp</button>
+        </div>
+        <p>📩 <a href="https://www.instagram.com/flame_coffee_service" target="_blank">Instagram</a></p>
+    </div>
+    
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const message = `Hello, my name is ${name}. My phone number is ${phone}. I need coffee machine service.`;
+            const whatsappNumber = "YOUR_WHATSAPP_NUMBER";
+            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
